@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') -%>
+
+<div id="filters" class="d-flex px-5 py-2 gap-3 bg-white">
+
+    <div class="filter">
+   <a href="/listings?category=Luxury" method="get" class="text-dark text-decoration-none"> <i class="fa-solid fa-crown"></i>
+    <p>Luxury</p></a>
+  </div>
+
+  <div class="filter">
+   <a href="/listings?category=Budget-Friendly" method="get" class="text-dark text-decoration-none"> <i class="fa-solid fa-wallet"></i>
+    <p>Budget-Friendly</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Family-Friendly" method="get" class="text-dark text-decoration-none"><i class="fa-solid fa-people-roof"></i>
+    <p>Family-Friendly</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Romantic Getaways" method="get" class="text-dark text-decoration-none"><i class="fa-solid fa-heart"></i>
+    <p>Romantic Getaways</p></a>
+  </div>
+
+  <div class="filter">
+    <a href="/listings?category=Pet-Friendly" method="get" class="text-dark text-decoration-none"> <i class="fa-solid fa-dog"></i>
+    <p>Pet-Friendly</p></a>
+  </div>
+
+  <div class="filter">
+     <a href="/listings?category=Nature & Adventure" method="get" class="text-dark text-decoration-none"><i class="fa-solid fa-tree"></i>
+    <p>Nature & Adventure</p></a>
+  </div>
+
+  <div class="filter">
+    <a href="/listings?category=Hill station" method="get" class="text-dark text-decoration-none"> <i class="fa-solid fa-mountain-sun"></i>
+    <p>Hill station</p></a>
+  </div>
+  <div class="filter">
+     <a href="/listings?category=Beachfront Stays" method="get" class="text-dark text-decoration-none"><i class="fa-solid fa-volleyball"></i> 
+    <p>Beachfront Stays</p></a>
+  </div>
+
+</div>
+
+<div class="row" style="margin-top: 2rem;">
+    <% for(let listing of allListings){ %>
+        <div class="card shadow-sm rounded-4 border-0" style="width: 18rem;">
+            <img src="<%= listing.image.url %>" class="card-img-top rounded-top-4" alt="listing_image" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title mb-1 text-dark fw-semibold"><%= listing.title %></h5>
+              <p class="text-muted small mb-2">
+                <i class="bi bi-geo-alt-fill"></i> <%= listing.location %>, <%= listing.country %>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span>₹<%= listing.price %> / night</span>
+                <a href="/listings/<%=listing._id%>" class="btn btn-outline-danger btn-sm rounded-pill">Book Now</a>
+              </div>
+            </div>
+          </div>        
+      <%  } %>
+</div>       
+
