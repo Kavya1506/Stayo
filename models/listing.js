@@ -20,7 +20,7 @@ const listingSchema = new mongoose.Schema({
     },
     category:{
         type: String,
-        enum: ["Luxury", "Budget-Friendly", "Family-Friendly", "Romantic Getaways", "Pet-Friendly", "Nature & Adventure", "Hill station", "Beachfront Stays"]
+        enum: ["Luxury", "Budget-Friendly", "Family-Friendly", "Romantic Getaways", "Pet-Friendly", "Nature & Adventure", "Hill Station", "Beachfront Stays"]
     },
     location:{
         type: String,
