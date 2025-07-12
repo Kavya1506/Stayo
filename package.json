@@ -1,18 +1,18 @@
 {
-  "engines":{
+  "engines": {
     "node": "v22.0.0"
   },
   "name": "air_bnb",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jay patel",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@mapbox/mapbox-sdk": "^0.16.1",
     "bootstrap": "^5.3.5",
     "cloudinary": "^1.30.0",
     "connect-flash": "^0.1.1",

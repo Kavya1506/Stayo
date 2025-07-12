@@ -4,7 +4,7 @@ const Review = require("./review.js");
 const { required } = require("joi");
 
 const listingSchema = new mongoose.Schema({
-    title:{
+    name:{
         type: String,
         required: true,
     },
@@ -15,17 +15,14 @@ const listingSchema = new mongoose.Schema({
        url: String,
         filename: String,
     },
-    price: {
+    points: {
         type: Number,
     },
     category:{
         type: String,
-        enum: ["Luxury", "Budget-Friendly", "Family-Friendly", "Romantic Getaways", "Pet-Friendly", "Nature & Adventure", "Hill Station", "Beachfront Stays"]
+        enum: ["T-shirts", "Shirts", "Trousers", "Jeans", "Hoodie", "Footwear"]
     },
     location:{
-        type: String,
-    },
-    country: {
         type: String,
     },
         geometry: {

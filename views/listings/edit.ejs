@@ -6,9 +6,9 @@
     <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation"enctype="multipart/form-data">
         
         <div class="mb-3">
-        <label for="title" class="form-label">Hotel name</label>
-        <input name="listing[title]" value="<%= listing.title %>" class="form-control" required>
-        <div class="invalid-feedback">Please enter a valid title</div>
+        <label for="title" class="form-label">Product name</label>
+        <input name="listing[name]" value="<%= listing.name %>" class="form-control" required>
+        <div class="invalid-feedback">Please enter a valid name</div>
         </div>
 
         <div class="mb-3">
@@ -27,22 +27,21 @@
         </div>
         <div class="row">
         <div class="mb-3 col-md-4">
-        <label for="price" class="form-label">Price</label>
-        <input name="listing[price]" value="<%= listing.price %>" class="form-control" required type="number">
-        <div class="invalid-feedback">Please enter a valid price</div>
+        <label for="price" class="form-label">Points</label>
+        <input name="listing[points]" value="<%= listing.points %>" class="form-control" required type="number">
+        <div class="invalid-feedback">Please enter a valid points</div>
         </div>
          <div class="mb-3 col-md-8">
     <label for="category" class="form-label">Category</label>
     <select name="listing[category]" class="form-select" required>
       <option value="" disabled selected>Select category</option>
-      <option value="Luxury">Luxury</option>
-      <option value="Budget-Friendly">Budget-Friendly</option>
-      <option value="Family-Friendly">Family-Friendly</option>
-      <option value="Romantic Getaways">Romantic Getaways</option>
-      <option value="Pet-Friendly">Pet-Friendly</option>
-      <option value="Nature & Adventure">Nature & Adventure</option>
-      <option value="Hill Station">Hill Station</option>
-      <option value="Beachfront Stays">Beachfront Stays</option>
+      <option value="T-Shirts">T-Shirts</option>
+      <option value="Shirts">Shirts</option>
+      <option value="Trousers">Trousers</option>
+      <option value="Jeans">Jeans</option>
+      <option value="Hoodie">Hoodie</option>
+      <option value="Footwear">Footwear</option>
+      
     </select>
   </div>
 
@@ -51,13 +50,9 @@
         <input name="listing[location]" value="<%= listing.location %>" placeholder="Vadodara, Gujarat" class="form-control" required>
         <div class="invalid-feedback">Please enter a valid location</div>
     </div>
-     <div class="mb-3 col-md-8">
-        <label for="country" class="form-label">Country</label>
-        <input name="listing[country]" placeholder="India" value ="<%= listing.country %>" class="form-control" required>
-        <div class="invalid-feedback">Please enter a valid country</div>
-    </div>
+    
         </div>
-        <button class="btn btn-danger rounded-pill px-4 py-2 mb-3"> done </button>
+        <button class="btn btn-danger rounded-pill px-4 py-2 mb-3"> Done </button>
     </form>
     </div>
 </div>
